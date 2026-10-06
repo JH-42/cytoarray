@@ -1,0 +1,27 @@
+Package: cytoarray
+Type: Package
+Title: Quantification and Differential Analysis of Membrane Cytokine Arrays
+Version: 0.0.5
+Authors@R: person("Junhao", "Wang", role = c("aut", "cre"), email = "junhao.wang.research@gmail.com")
+Description: Quantifies dot-blot membrane cytokine arrays (e.g. R&D Systems
+    Proteome Profiler) from scanned images. Registers a spot-layout template onto
+    each membrane by an affine fit on the corner reference spots (automatic or by
+    clicking six points), refines each spot automatically or interactively,
+    measures each spot over a circular aperture with a local background, averages
+    the duplicate spots, and runs limma-based differential analysis across groups.
+    Between-array normalisation is off by default, following the manufacturer's
+    guidance that the reference spots are not a loading control.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+    EBImage,
+    limma,
+    statmod,
+    grDevices,
+    graphics,
+    stats,
+    utils
+Suggests:
+    png
+RoxygenNote: 7.2.3
