@@ -54,13 +54,15 @@ right-click, as supported by your R graphics device.
 
 Circle colours:
 
-- **Green**: position adjusted automatically or manually.
-- **Cyan**: other measured spots without position adjustment.
-- **Orange**: high-intensity spots without position adjustment.
+- **Green**: centre located by automatic refinement or set manually.
+- **Cyan**: no successful refinement recorded; check the spot position.
+- **Orange**: same status as cyan, but with a stronger signal (above the membrane’s 75th percentile).
 - **Red**: missing measurement.
 - **Magenta**: the spot currently selected during manual adjustment.
 
 Colours indicate processing status, not statistical significance.
+Always check that the circles match the spots, including green circles.
+
 
 Check the verification images and QC table before using the intensity tables.
 To redo one membrane, run `arr <- remanual(arr, ids = "ctrl_1")` and save it again.
